@@ -1,0 +1,12 @@
+{
+    "name": "yourname/smartfit",
+    "description": "A workout planner app",
+    "require": {
+        "mongodb/mongodb": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

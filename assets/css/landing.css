@@ -1,0 +1,545 @@
+/* File: assets/css/landing.css */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* File: assets/css/landing.css */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed; /* Fixed position to keep it at the top of the page */
+    width: 100%;
+    height: 83px;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between; /* Distributes space between the elements */
+    align-items: center; /* Vertically center items */
+    padding: 0 20px; /* Adjust padding for better positioning */
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Logo */
+.navbar .logo {
+    width: 90px;
+    height: 60px;
+    background: url('/assets/img/muscleman.png') no-repeat center center;
+    background-size: contain; /* Adjust the image size to fit the div */
+    /* Optional: This ensures the logo stays at the left side */
+    margin-right: auto; /* Ensures the logo stays on the left side */
+}
+
+/* NAV-LINKS */
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; /* Center the nav links */
+    flex-grow: 1; /* Makes the nav-links container grow and take up available space */
+}
+
+.navbar .nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Exercise icon next to link */
+.navbar .nav-links .exercise::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url('assets/img/image.png') no-repeat center center;
+    background-size: contain;
+    transform: scaleX(-1); /* Mirror the image */
+    margin-left: 5px; /* Space between link and icon */
+}
+
+/* Signup Button */
+.navbar .signup-button {
+    background-color: #FF0000;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 109.45px;
+    height: 46px;
+}
+
+.navbar .signup-button a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* HEADER CONTENT */
+.header-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: url('/assets/img/likodmanong.png') no-repeat center center/cover;
+    background-size: cover; /* Ensure it covers the entire section */
+}
+
+.header-content .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Overlay sits above the background image */
+}
+
+.header-content .headline {
+    position: relative;
+    z-index: 1; /* Ensure headline text is above the overlay */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap'); /* Inter Black */
+
+.header-content .headline h1 {
+    font-family: 'Inter', sans-serif; /* Apply Inter font */
+    font-weight: 900; /* Inter Black 70 weight */
+    font-size: 4rem; /* Adjusted for responsiveness */
+    margin-bottom: 10px;
+}
+
+
+.transform-body {
+    color: white; /* White color for "Transform Your Body" */
+    display: block;
+}
+
+.transform-life {
+    color: #FF0000; /* Red color for "Transform Your Life" */
+    display: block;
+}
+
+
+.header-content .headline p {
+    font-size: 1.5rem; /* Adjusted for responsiveness */
+    margin-bottom: 20px;
+}
+
+.header-content .buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.header-content .buttons .get-started-btn {
+    background-color: #ff0000;
+}
+
+.header-content .buttons .get-started-btn:hover {
+    background-color: #ff0000;
+}
+
+.header-content .buttons .learn-more-btn {
+    background-color: #555;
+}
+
+.header-content .buttons .learn-more-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content .headline h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content .headline p {
+        font-size: 1rem;
+    }
+
+    .header-content .buttons a {
+        padding: 10px 20px;
+    }
+}
+
+/* We Offer Section */
+.we-offer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #202020;
+    padding: 50px 0; /* Add some padding for spacing */
+}
+
+/* Workout Container */
+.workout-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the boxes are spaced evenly */
+    align-items: center; /* Aligns items vertically in the center */
+    flex-wrap: nowrap; /* Prevents the items from wrapping to the next line */
+    width: 100%;
+    max-width: 1920px; /* Maximum width of the container */
+    overflow-x: auto; /* Allows horizontal scrolling if necessary */
+}
+
+/* Generic workout box styling */
+.workout-box {
+    position: relative;
+    width: 348px;
+    height: 242px;
+    background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 20px;
+    text-align: justify; /* Justify text */
+    flex-direction: column;
+}
+
+/* Icon container inside the workout box */
+.workout-box .icon {
+    width: 74px; /* Ensure all icons are the same size */
+    height: 74px;
+    margin-bottom: 15px; /* Space between icon and text */
+     /* Make sure the image fits inside */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Heading and subheading styling */
+.workout-box .heading {
+    font-family: 'Inter';
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+    text-align: justify; /* Justify the heading text */
+}
+
+.workout-box .subheading {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 19px;
+    color: #AAAAAA;
+    text-align: justify; /* Justify the subheading text */
+}
+
+/* Custom Icons for each workout */
+.custom-icon-1 {
+    background-image: url('/assets/img/calendar1.png');
+}
+
+.custom-icon-2 {
+    background-image: url('/assets/img/another-icon.png'); /* Replace with the correct image path */
+}
+
+.custom-icon-3 {
+    background-image: url('/assets/img/Track1.png');
+}
+
+.custom-icon-4 {
+    background-image: url('/assets/img/dumbbell1.png');
+    width: 74px;
+    height: 74px; /* Resize the image to 60% of its original size */
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .we-offer .workout-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .we-offer .workout-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+/* Locate Gym Section */
+.locate-gym {
+    background: #2F2F2F; /* Background color for the section */
+    color: #FFFFFF;
+    padding: 60px 0; /* Adjust padding for spacing */
+}
+
+/* Container for the Locate Gym Section (Flexbox for Layout) */
+.locate-gym-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the items */
+    max-width: 900px; /* Optional: Set a max width for the container */
+    margin: 0 auto; /* Center align the content */
+}
+
+/* Find Gym Near Me Text */
+.find-gym-text {
+    
+    width: 50%; /* Set width for left side (Find Gym Near Me) */
+    text-align: left;
+}
+
+/* Find Gym Near Me Heading */
+.find-gym-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 77px;
+    color: #FFFFFF;
+    margin-bottom: 20px; /* Space between title and input */
+}
+
+/* Input Field */
+.find-gym-text input[type="text"] {
+    width: 100%;
+    height: 85px;
+    padding: 15px;
+    font-size: 32px;
+    line-height: 39px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #7E7E7E;
+    margin-bottom: 20px; /* Space between input and button */
+}
+
+/* Button */
+.find-gym-text button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.find-gym-text button:hover {
+    background-color: #D90000; /* Darker red on hover */
+}
+
+/* Result Section (Map or List View) */
+.result {
+    width: 45%; /* Set width for right side (Map/List View) */
+    background: #FFFFFF;
+    padding: 30px;
+    text-align: center; /* Center align text inside */
+}
+
+/* Result Heading */
+.result h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    line-height: 77px;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .locate-gym-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .find-gym-text,
+    .result {
+        width: 90%; /* Make each section take up 90% width */
+        margin-bottom: 20px; /* Space between sections */
+    }
+}
+
+/* ABOUT US SECTION */
+.about-us {
+    position: relative;
+    width: 100%;
+    background: #202020;
+    color: #FFFFFF;
+    padding: 40px;
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Space between each section */
+    align-items: flex-start; /* Align items at the start of the container */
+}
+
+/* About Text */
+.about-text {
+    width: 30%; /* Adjust width to fit content */
+    margin-right: 20px; /* Space between About Us and Quick Links */
+}
+
+.about-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.about-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #AAAAAA;
+    text-align: justify;
+}
+
+/* Quick Links */
+.quick-links {
+    width: 30%; /* Adjust width to fit content */
+    margin-right: 20px; /* Space between Quick Links and Stay Connected */
+}
+
+.quick-links h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 15px; /* Add space below the title */
+
+}
+
+.quick-links ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.quick-links ul li {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #AAAAAA;
+    
+}
+
+.quick-links ul li a {
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+.quick-links ul li a:hover {
+    color: #FFFFFF;
+}
+/* Stay Connected Section */
+.stay-connected {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between elements */
+}
+.stay-connected h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+/* Email input and button container */
+.stay-connected .input-container {
+    display: flex;
+    align-items: center; /* Vertically center the input and button */
+    gap: 10px; /* Space between input and button */
+}
+
+/* Email input field */
+.stay-connected input[type="email"] {
+    width: 60%; /* Adjust the width of the input field */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    
+    background-color: #2F2F2F; /* Set background color to #2F2F2F */
+    color: #fff; /* Text color inside the input box */
+}
+
+/* Sign up button */
+/* Sign Up Button Text Style */
+.signup-link {
+    font-family: 'Inter', sans-serif; /* Apply the Inter font */
+    font-weight: 400; /* Regular weight */
+    font-size: 16px; /* Adjust the size to your preference */
+    color: #FFFFFF; /* White color for the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* To make the link behave like a button */
+    padding: 10px 20px; /* Add padding for the button feel */
+    background-color: #D12727; /* Red background */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.signup-link:hover {
+    background-color: #B22B2B; /* Darker red on hover */
+}
+
+
+.signup-link:hover {
+    background-color: #cc0000; /* Darker red for hover effect */
+}
+
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 5px; /* Adds space between the icons */
+    justify-content: left; /* Centers the icons horizontally */
+    }
+
+/* Individual Social Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Set size of the circular button */
+    height: 40px; /* Make the button square */
+    border-radius: 50%; /* Makes the icon circular */
+    overflow: hidden; /* Ensure image is clipped to fit the circle */
+    background-color: #282828; /* Background color for the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.social-icons a:hover {
+    background-color: #D12727; /* Background color on hover */
+}
+
+/* Inside the anchor tag - the image */
+.social-icons a img {
+    width: 24px; /* Adjust the size of the image */
+    height: 24px; /* Keep the image proportional */
+    object-fit: cover; /* Ensure image fits well within the circle */
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column; /* Stack the sections vertically on small screens */
+        align-items: center; /* Center the items */
+    }
+
+    .about-text, .quick-links, .stay-connected {
+        width: 100%; /* Make each section take up full width */
+        margin-right: 0; /* Remove margins */
+        margin-bottom: 20px; /* Add space between stacked sections */
+    }
+}
